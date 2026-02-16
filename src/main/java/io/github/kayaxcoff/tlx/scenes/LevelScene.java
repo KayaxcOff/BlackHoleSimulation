@@ -36,7 +36,8 @@ public class LevelScene extends Scene {
 
     @Override
     public void Init() {
-        this.camera = new Camera(new Vector3f(0, 0, -5), 15.0f);
+        this.camera = new Camera(new Vector3f(0, 0, -5), 12.0f);
+        this.camera.setPitch(25.0f);
         this.shader = new Shader("src/main/resources/shaders/default.vert", "src/main/resources/shaders/default.frag");
 
         this.particleShader = new Shader("src/main/resources/shaders/particle.vert", "src/main/resources/shaders/particle.frag");
@@ -65,7 +66,7 @@ public class LevelScene extends Scene {
 
         this.spaceTimeGrid = new SpaceTimeGrid(
                 new Vector3f(0.0f, -1.0f, -5.0f),  // Kara deliğin altında
-                10.0f,  // Grid boyutu
+                12.0f,  // Grid boyutu
                 30      // Çizgi sayısı
         );
         spaceTimeGrid.setGridColor(0.15f, 0.3f, 0.6f);

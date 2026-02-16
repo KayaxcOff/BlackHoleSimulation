@@ -19,11 +19,11 @@ void main() {
         float strength = (8.0 - dist) / 8.0; // 0 ile 1 arası
 
         // AŞAĞI ÇEK (uzay-zaman çukuru)
-        worldPos.y -= strength * 3.0;
+        worldPos.y -= strength * 5.0;
 
         // KARA DELİĞE DOĞRU ÇEK (radyal)
         vec3 direction = normalize(blackHolePos - worldPos);
-        worldPos += direction * strength * 1.5;
+        worldPos += direction * strength * 2.5;
 
         // Renk efekti (turuncu glow)
         fColor = mix(aColor, vec4(1.0, 0.5, 0.0, 1.0), strength * 0.5);
